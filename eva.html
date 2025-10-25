@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="eva.css" />
+    <title>Edu Market - Tu Librería (EVA ETAPA 3)</title>
+</head>
+<body>
+    
+    <header>
+        <a href="#inicio" class="logo">
+            <img src="media/media/image.png" alt="Edu Market Logo">
+            <span><br>Edu<br>Market</span>
+            
+            <div id="click-counter">
+                <span id="click-count">0</span> Clicks
+            </div>
+        </a>
+
+        <nav>
+            <br>
+            <a href="#inicio">Inicio</a>
+            <a href="#productos">Libros</a>
+            <a href="#contacto">Contactanos</a>
+
+            <button id="modo-toggle" class="modo-toggle-btn">
+                Claro
+            </button>
+        </nav>
+    </header>
+
+    <section class="home" id="inicio">
+        <div class="home-img">
+            <img src="media/media/image.png" alt="Edu Market Ilustración">
+        </div>
+
+        <div class="home-content">
+            <h1>Bienvenido a <span class="energia-span">Edu Market</span></h1>
+            
+            <h3 class="typing-text">Tu librería de <span></span></h3> 
+            
+            <p>
+                En <span class="energia-span">Edu Market</span> creemos en el poder transformador de la lectura. Somos una librería dedicada exclusivamente a conectar lectores con nuevas aventuras, conocimientos y perspectivas. 
+                <br><br>
+                Desde los clásicos de la literatura hasta las últimas novedades en tecnología y ciencia, nuestro catálogo está cuidadosamente seleccionado para inspirar a mentes curiosas de todas las edades.
+            </p>
+            
+            <a href="#productos" class="btn">Explorar Libros</a>
+            <a href="#contacto" class="btn">Contactanos</a>
+        </div>
+    </section>
+
+    <section class="seccion-general" id="productos">
+        <h1>Nuestros <span class="energia-span">Libros</span> Destacados</h1>
+        <p class="seccion-descripcion">
+            Explora nuestra colección. Hemos seleccionado 10 títulos imperdibles de 5 categorías diferentes para ti.
+        </p>
+        <div class="search-container">
+            <input type="search" id="search-bar" placeholder="Buscar libro por título...">
+        </div>
+        <div class="productos-grid">
+            
+            <div class="producto-card">
+                <img src="imagenes/dune.jpeg" alt="Libro Dune">
+                <div class="card-content">
+                    <p class="categoria">Ciencia Ficción</p>
+                    <h3>Dune</h3>
+                    <p>La épica obra maestra de Frank Herbert...</p>
+                    <p class="producto-precio">$350.00</p>
+                    <a href="#" class="btn btn-comprar" data-titulo="Dune" data-precio="350.00">Comprar</a>
+                </div>
+            </div>
+
+            <div class="producto-card">
+                <img src="imagenes/farenhei.png" alt="Libro Fahrenheit 451">
+                <div class="card-content">
+                    <p class="categoria">Ciencia Ficción</p>
+                    <h3>Fahrenheit 451</h3>
+                    <p>La distopía clásica de Ray Bradbury...</p>
+                    <p class="producto-precio">$280.00</p>
+                    <a href="#" class="btn btn-comprar" data-titulo="Fahrenheit 451" data-precio="280.00">Comprar</a>
+                </div>
+            </div>
+
+            <div class="producto-card">
+                <img src="imagenes/1984.jpeg" alt="Libro 1984">
+                <div class="card-content">
+                    <p class="categoria">Clásicos de la Literatura</p>
+                    <h3>1984</h3>
+                    <p>La inolvidable visión de George Orwell...</p>
+                    <p class="producto-precio">$250.00</p>
+                    <a href="#" class="btn btn-comprar" data-titulo="1984" data-precio="250.00">Comprar</a>
+                </div>
+            </div>
+
+            <div class="producto-card">
+                <img src="imagenes/cien.jpeg" alt="Libro Cien Años de Soledad">
+                <div class="card-content">
+                    <p class="categoria">Clásicos de la Literatura</p>
+                    <h3>Cien Años de Soledad</h3>
+                    <p>La obra cumbre de Gabriel García Márquez...</p>
+                    <p class="producto-precio">$320.00</p>
+                    <a href="#" class="btn btn-comprar" data-titulo="Cien Años de Soledad" data-precio="320.00">Comprar</a>
+                </div>
+            </div>
+
+            <div class="producto-card">
+                <img src="imagenes/clena.jpeg" alt="Libro Clean Code">
+                <div class="card-content">
+                    <p class="categoria">Tecnología</p>
+                    <h3>Clean Code</h3>
+                    <p>El manual esencial de Robert C. Martin...</p>
+                    <p class="producto-precio">$750.00</p>
+                    <a href="#" class="btn btn-comprar" data-titulo="Clean Code" data-precio="750.00">Comprar</a>
+                </div>
+            </div>
+
+            <div class="producto-card">
+                <img src="imagenes/js.jpeg" alt="Libro Eloquent JavaScript">
+                <div class="card-content">
+                    <p class="categoria">Tecnología</p>
+                    <h3>Eloquent JavaScript</h3>
+                    <p>Una guía moderna y profunda para dominar JavaScript...</p>
+                    <p class="producto-precio">$680.00</p>
+                    <a href="#" class="btn btn-comprar" data-titulo="Eloquent JavaScript" data-precio="680.00">Comprar</a>
+                </div>
+            </div>
+
+            <div class="producto-card">
+                <img src="imagenes/viento.jpeg" alt="Libro La Sombra del Viento">
+                <div class="card-content">
+                    <p class="categoria">Misterio y Suspenso</p>
+                    <h3>La Sombra del Viento</h3>
+                    <p>El best-seller de Carlos Ruiz Zafón...</p>
+                    <p class="producto-precio">$310.00</p>
+                    <a href="#" class="btn btn-comprar" data-titulo="La Sombra del Viento" data-precio="310.00">Comprar</a>
+                </div>
+            </div>
+
+            <div class="producto-card">
+                <img src="imagenes/descarga.jpeg" alt="Libro El Psicoanalista">
+                <div class="card-content">
+                    <p class="categoria">Misterio y Suspenso</p>
+                    <h3>El Psicoanalista</h3>
+                    <p>Un thriller psicológico de John Katzenbach...</p>
+                    <p class="producto-precio">$290.00</p>
+                    <a href="#" class="btn btn-comprar" data-titulo="El Psicoanalista" data-precio="290.00">Comprar</a>
+                </div>
+            </div>
+
+            <div class="producto-card">
+                <img src="imagenes/habitos.jpeg" alt="Libro Hábitos Atómicos">
+                <div class="card-content">
+                    <p class="categoria">Desarrollo Personal</p>
+                    <h3>Hábitos Atómicos</h3>
+                    <p>James Clear ofrece un método probado...</p>
+                    <p class="producto-precio">$330.00</p>
+                    <a href="#" class="btn btn-comprar" data-titulo="Hábitos Atómicos" data-precio="330.00">Comprar</a>
+                </div>
+            </div>
+
+            <div class="producto-card">
+                <img src="imagenes/hombtre.jpeg" alt="Libro El Hombre en Busca de Sentido">
+                <div class="card-content">
+                    <p class="categoria">Desarrollo Personal</p>
+                    <h3>El Hombre en Busca de Sentido</h3>
+                    <p>La conmovedora reflexión de Viktor Frankl...</p>
+                    <p class="producto-precio">$240.00</p>
+                    <a href="#" class="btn btn-comprar" data-titulo="El Hombre en Busca de Sentido" data-precio="240.00">Comprar</a>
+                </div>
+            </div>
+
+        </div> 
+    </section>
+
+    <section class="seccion-general" id="mi-lista">
+        <h1>Tu <span class="energia-span">Lista</span> de Libros</h1>
+        <p class="seccion-descripcion">Aquí aparecerán los libros que añadas.</p>
+        
+        <ul id="lista-libros">
+            <li id="lista-vacia">Tu lista está vacía. ¡Añade algunos libros!</li>
+        </ul>
+
+        <div class="lista-footer">
+            <h2 class="lista-total">Total: <span id="lista-total-monto">$0.00</span></h2>
+            <button id="vaciar-lista" class="btn btn-vaciar">Vaciar Lista y Comprar</button>
+        </div>
+    </section>
+    
+    <section class="seccion-general" id="contacto">
+        <h1><span class="energia-span">Contactanos</span></h1>
+        <p class="seccion-descripcion">
+            ¿Buscas un libro en especial? ¿Necesitas una cotización? 
+            Envíanos un mensaje y te responderemos a la brevedad.
+        </p>
+
+        <div class="form-container">
+            <form action="#">
+                <div class="form-grupo">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+                </div>
+                
+                <div class="form-grupo">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="tu.correo@ejemplo.com" required>
+                </div>
+                
+                <div class="form-grupo">
+                    <label for="asunto">Asunto:</label>
+                    <input type="text" id="asunto" name="asunto" placeholder="Ej:  Búsqueda de libro, sugerencias para la pagina">
+                </div>
+                
+                <div class="form-grupo">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-submit">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section> <div id="toast-container"></div>
+    
+    <script src="eva.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,909 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+/* --- RESETEO Y BASE --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #F4F4F9; 
+  color: #333333; 
+}
+
+/* --- TIPOGRAFÍA GENERAL --- */
+h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 2rem;
+  color: #2c3e50; 
+}
+h3 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #005A9C; 
+}
+p {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: #555; 
+}
+
+/* Span de acento */
+.energia-span {
+  color: #005A9C;
+}
+
+/* --- HEADER Y NAVEGACIÓN --- */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 9%;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: #005A9C; 
+  display: flex;
+  align-items: center;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s ease;
+  line-height: 1.1;
+}
+.logo img{
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+.logo:hover {
+  transform: scale(1.05);
+}
+
+nav a {
+  font-size: 1.8rem;
+  color: #005A9C; 
+  margin-left: 4rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+  color: #007BFF; 
+  border-bottom: 3px solid #007BFF;
+}
+
+/* --- ESTILOS DE SECCIÓN GENERAL --- */
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 5rem;
+}
+
+/* Sección de Inicio (Hero) */
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+  flex-wrap: wrap;
+}
+
+.home-img {
+  flex: 1;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Limpiando reglas duplicadas */
+.home-img img {
+  position: relative;
+  width: 400px; /* Tamaño ajustado */
+  height: 400px;
+  object-fit: cover;
+  border-radius: 65% 35% 55% 45% / 40% 50% 50% 60%; /* Forma de "blob" */
+  box-shadow: 0 10px 30px rgba(0, 90, 156, 0.3); /* Sombra azul */
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.home-img img:hover {
+  transform: scale(1.1); /* Efecto hover simple */
+  box-shadow: 0 10px 35px rgba(0, 123, 255, 0.5); /* Sombra más intensa */
+}
+
+.home-content {
+  flex: 1.5;
+  max-width: 80rem;
+  text-align: left;
+}
+
+.home-content h3 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #333333; 
+  margin-bottom: 2rem;
+}
+
+/* --- BOTÓN PRINCIPAL --- */
+.btn {
+  display: inline-block;
+  padding: 1.2rem 3rem;
+  background-color: #005A9C; 
+  border-radius: 4rem;
+  font-size: 1.6rem;
+  color: #FFFFFF; 
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  border: 2px solid #005A9C;
+  transition: 0.3s ease;
+  cursor: pointer;
+  margin: 2rem 1rem 0 0;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background-color: #007BFF; 
+  border-color: #007BFF;
+  color: #FFFFFF;
+  box-shadow: 0 0 25px rgba(0, 123, 255, 0.5); 
+}
+
+/* --- ANIMACIÓN DE TEXTO --- */
+.typing-texts {
+
+  font-size: 34px;
+
+  font-weight: 600;
+
+  min-width: 280px;
+
+}
+
+
+
+.typing-text span {
+
+  position: relative;
+
+}
+
+
+
+.typing-text span::before {
+
+  content: "software Developer";
+
+  color: #007BFF;
+
+  animation: words 10s infinite;
+
+}
+
+
+
+.typing-text span::after {
+
+  content: "";
+
+  background-color: #F4F4F9;
+
+  position: absolute;
+
+  width: calc(100% + 8px);
+
+  height: 100%;
+
+  border-left: 3px solid #007BFF;
+
+  right: -8;
+
+  animation: cursor 0.6s infinite;
+
+}
+
+
+
+@keyframes cursor {
+
+  to {
+    border-left: 3px solid;
+  }
+}
+/* Animación de nombres de equipo */
+/* Ajustando tiempos para 8 nombres en 16 segundos */
+@keyframes words {
+
+  0%, 20% { content: "Lectura"; }
+
+  21%, 40% { content: "Conocimiento"; }
+
+  41%, 60% { content: "Cultura"; }
+
+  61%, 80% { content: "Aventura"; }
+
+  81%, 100% { content: "Ciencia"; }
+
+}
+/* --- SECCIÓN GENERAL (PARA PRODUCTOS Y CONTACTO) --- */
+.seccion-general {
+  text-align: center;
+}
+.search-container {
+  margin: 0 auto 4rem auto; /* Centrado y con espacio abajo */
+  max-width: 70rem;
+}
+
+#search-bar {
+  width: 100%;
+  padding: 1.5rem 2rem;
+  font-size: 1.8rem;
+  border-radius: 4rem; /* Redondeado, como los botones */
+  border: 2px solid #ccc;
+  background: #FFFFFF;
+  color: #333;
+}
+#search-bar:focus {
+  border-color: #005A9C; /* Acento azul al seleccionar */
+  box-shadow: 0 0 10px rgba(0, 90, 156, 0.3);
+}
+.seccion-descripcion {
+  font-size: 2rem;
+  color: #555;
+  margin-bottom: 5rem;
+  max-width: 70rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- SECCIÓN DE PRODUCTOS (GRID) --- */
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  text-align: left;
+}
+
+.producto-card {
+  background-color: #FFFFFF; 
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Hacemos que la card use flex para posicionar el botón al fondo */
+  display: flex;
+  flex-direction: column;
+}
+
+.producto-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 90, 156, 0.2); 
+}
+
+.producto-card img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-content {
+  padding: 2rem 2rem 0.5rem 2rem;
+  /* Hacemos que esta parte crezca para empujar el botón al fondo */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content p {
+  flex-grow: 1; /* La descripción <p> empuja el precio y botón hacia abajo */
+}
+
+.producto-card .categoria {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #5F9EA0; 
+  margin-bottom: 1rem;
+  flex-grow: 0; /* No debe crecer */
+}
+
+.producto-card p {
+  font-size: 1.6rem;
+  color: #444; 
+}
+
+/* NUEVO: Estilo para el precio */
+.producto-precio {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #005A9C;
+  margin: 1rem 0;
+  flex-grow: 0;
+}
+
+.btn-comprar {
+  width: 100%;        
+  text-align: center; 
+  margin: 1rem 0 1.5rem 0; /* Margen ajustado */ 
+  padding: 1rem 0;     
+  font-size: 1.5rem;
+  flex-shrink: 0; /* Evita que el botón se encoja */
+}
+
+/* ESTILO "AÑADIDO" */
+.btn-anadido {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: #ffffff;
+  cursor: not-allowed; 
+}
+.btn-anadido:hover {
+  background-color: #218838; 
+  border-color: #1e7e34;
+  transform: scale(1);
+  box-shadow: none;
+}
+
+/* --- SECCIÓN "MI LISTA" --- */
+#mi-lista {
+  background-color: #FFFFFF;
+  min-height: auto; 
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+#lista-libros {
+  list-style: none;
+  padding: 0;
+  max-width: 70rem;
+  margin: 3rem auto 0 auto;
+  text-align: left;
+}
+
+#lista-libros li {
+  background-color: #F4F4F9;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #333;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  /* NUEVO: Flex para alinear título y precio */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* NUEVO: Estilo para el precio en la lista */
+.lista-item-precio {
+  font-weight: 600;
+  color: #005A9C;
+  font-size: 1.6rem;
+  flex-shrink: 0;
+  margin-left: 2rem;
+}
+
+#lista-vacia {
+  background-color: transparent;
+  box-shadow: none;
+  color: #888;
+  text-align: center;
+  font-style: italic;
+  font-weight: 400;
+  display: block; /* Asegurarse de que se muestre */
+}
+
+/* NUEVO: Contenedor del Total y Botón */
+.lista-footer {
+  max-width: 70rem;
+  margin: 3rem auto 0 auto;
+  padding-top: 2rem;
+  border-top: 2px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Para pantallas pequeñas */
+}
+
+.lista-total {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0;
+}
+
+#lista-total-monto {
+  color: #005A9C;
+}
+
+/* NUEVO: Botón de Vaciar/Comprar */
+.btn-vaciar {
+  background-color: #dc3545; /* Rojo de "peligro" */
+  border-color: #dc3545;
+  margin: 0; /* Quitar margen por defecto */
+}
+.btn-vaciar:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+  box-shadow: 0 0 25px rgba(220, 53, 69, 0.5);
+}
+
+
+/* --- SECCIÓN DE CONTACTO --- */
+.form-container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 3rem;
+  background-color: #FFFFFF; 
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+}
+
+.form-grupo {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.form-grupo label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #005A9C; 
+  margin-bottom: 0.5rem;
+}
+
+.form-grupo input,
+.form-grupo textarea {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.6rem;
+  border-radius: 5px;
+  border: 1px solid #ccc; 
+  background: #F9F9F9; 
+  color: #333;
+}
+
+.form-grupo input::placeholder,
+.form-grupo textarea::placeholder {
+  color: #999;
+}
+
+.btn-submit {
+  width: 100%;
+  margin-top: 1rem;
+  background-color: #007BFF; 
+  border-color: #007BFF;
+  color: #FFFFFF;
+}
+
+.btn-submit:hover {
+  background-color: #005A9C; 
+  border-color: #005A9C;
+  box-shadow: 0 0 25px rgba(0, 90, 156, 0.4);
+}
+
+/* --- ESTILOS TOAST --- */
+#toast-container {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.toast {
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  background-color: #28a745;
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ==================================================
+   ¡AQUÍ COMIENZAN LOS ESTILOS DEL MODO OSCURO!
+==================================================
+*/
+
+/* --- Estilo para el botón 🌙/☀️ --- */
+.modo-toggle-btn {
+  background: none;
+  border: none;
+  font-size: 1.8rem; /* Tamaño del texto */
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-left: 2rem;
+  color: #005A9C;
+  padding: 0.5rem 1rem;
+  border: 2px solid #FFC300;
+  background-color: #FFC300;
+  color: #005A9C;
+
+  border-radius: 2rem;
+}
+.modo-toggle-btn:hover {
+  transform: scale(1.1);
+}
+.dark-mode .home-img img{
+  box-shadow: 0 0 25px #FFC300;
+
+}
+.dark-mode .home-img img:hover {
+  box-shadow: 0 0 35px #FFC300; 
+}
+
+/* --- Sobreescrituras para el MODO OSCURO --- */
+.dark-mode body,
+.dark-mode {
+  background-color: #333333;
+  color: #ffffff;
+}
+.dark-mode .modo-toggle-btn{
+  color: #FFC300;
+  border-color: #005A9C;
+  background-color: #005A9C;
+
+}
+.dark-mode .modo-toggle-btn:hover {
+  background-color: #FFC300;
+  color: #333;
+}
+
+.dark-mode h1 {
+  color: #ffffff;
+}
+.dark-mode h3 {
+  color: #FFC300;
+}
+.dark-mode p {
+  color: #ddd;
+}
+
+.dark-mode .energia-span {
+  color: #FF8C00;
+}
+
+.dark-mode header {
+  background-color: rgba(51, 51, 51, 0.8);
+  border-bottom: 1px solid rgba(255, 140, 0, 0.2);
+}
+/* ... (estilo .dark-mode .seccion-descripcion) ... */
+
+/* === ¡NUEVO! BARRA DE BÚSQUEDA EN MODO OSCURO === */
+
+.dark-mode #search-bar {
+  background: #555;
+  border-color: #777;
+  color: #FFFFFF;
+}
+.dark-mode #search-bar:focus {
+  border-color: #FF8C00; /* Acento naranja */
+  box-shadow: 0 0 10px rgba(255, 140, 0, 0.3);
+}
+/* =========================================== */
+
+
+.dark-mode .logo {
+  color: #FF8C00;
+}
+.dark-mode nav a {
+  color: #FF8C00;
+}
+.dark-mode nav a:hover,
+.dark-mode nav a.active {
+  color: #FFA500;
+  border-bottom: 3px solid #FFA500;
+}
+
+.dark-mode .btn {
+  background-color: #FF8C00;
+  color: #333;
+  border-color: #FF8C00;
+}
+
+.dark-mode .btn:hover {
+  background-color: #FFA500;
+  border-color: #FFA500;
+  color: #000;
+  box-shadow: 0 0 25px #FFA500;
+}
+
+.dark-mode .home-content h3 {
+  color: #ffffff;
+}
+.dark-mode .typing-text span {
+  color: #FF8C00; /* La palabra animada sí va naranja */
+}
+
+.dark-mode .typing-text span::after {
+  background-color: #333333; /* El fondo que "borra" */
+  border-left: 3px solid #FF8C00; /* El cursor naranja */
+}
+
+.dark-mode .typing-text span::before {
+
+  content: "software Developer";
+
+  color: #FF8C00;
+
+}
+
+.dark-mode .seccion-descripcion {
+  color: #ccc;
+}
+
+.dark-mode .producto-card {
+  background-color: #444;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .producto-card:hover {
+  box-shadow: 0 10px 30px rgba(255, 140, 0, 0.3);
+}
+
+.dark-mode .producto-card .categoria {
+  color: #FFD700;
+}
+.dark-mode .producto-card p {
+  color: #ddd;
+}
+
+/* MODO OSCURO: Precio */
+.dark-mode .producto-precio {
+  color: #FFC300;
+}
+
+.dark-mode .form-container {
+  background-color: #444;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .form-grupo label {
+  color: #FF8C00;
+}
+
+.dark-mode .form-grupo input,
+.dark-mode .form-grupo textarea {
+  border: 1px solid #777;
+  background: #555;
+  color: #ffffff;
+}
+
+.dark-mode .form-grupo input::placeholder,
+.dark-mode .form-grupo textarea::placeholder {
+  color: #aaa;
+}
+
+.dark-mode .btn-submit {
+  background-color: #FFA500;
+  border-color: #FFA500;
+  color: #333;
+}
+
+.dark-mode .btn-submit:hover {
+  background-color: #FFC300;
+  border-color: #FFC300;
+  box-shadow: 0 0 25px #FFC300;
+}
+
+/* MODO OSCURO: Botón "Añadido" */
+.dark-mode .btn-anadido {
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+  color: #333;
+}
+.dark-mode .btn-anadido:hover {
+  background-color: #4cae4c;
+  border-color: #4cae4c;
+}
+
+/* MODO OSCURO: "Mi Lista" */
+.dark-mode #mi-lista {
+  background-color: #2c2c2c;
+}
+.dark-mode #lista-libros li {
+  background-color: #444;
+  color: #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.dark-mode .lista-item-precio {
+  color: #FFC300;
+}
+.dark-mode #lista-vacia {
+  background-color: transparent;
+  color: #777;
+  box-shadow: none;
+}
+.dark-mode .lista-footer {
+  border-top: 2px solid #555;
+}
+.dark-mode .lista-total {
+  color: #eee;
+}
+.dark-mode #lista-total-monto {
+  color: #FFC300;
+}
+.dark-mode .btn-vaciar {
+  background-color: #e74c3c; /* Rojo más brillante */
+  border-color: #e74c3c;
+  color: #ffffff;
+}
+.dark-mode .btn-vaciar:hover {
+  background-color: #c0392b;
+  border-color: #c0392b;
+}
+
+/* MODO OSCURO: Toast */
+.dark-mode .toast {
+  background-color: #5cb85c;
+  color: #333;
+}
+
+
+/* --- RESPONSIVIDAD (MENÚ) --- */
+@media (max-width: 995px) {
+  nav {
+    position: absolute;
+    display: none;
+    top: 100%; 
+    right: 0;
+    width: 40%;
+    min-width: 250px;
+    border-left: 3px solid #005A9C;
+    border-bottom: 3px solid #005A9C;
+    border-bottom-left-radius: 2rem;
+    padding: 1rem;
+    background-color: #FFFFFF;
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  nav a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+    color: #005A9C;
+    text-align: center;
+  }
+
+  nav a:hover,
+  nav a.active {
+    transform: scale(1.1);
+    color: #007BFF;
+    border-bottom: none;
+  }
+
+  html {
+    font-size: 55%;
+  }
+
+  section {
+    padding: 10rem 4% 5rem;
+  }
+  
+  .modo-toggle-btn {
+    display: block;
+    margin: 2rem auto;
+  }
+  
+  header nav .modo-toggle-btn {
+      display: none;
+  }
+  header nav.active .modo-toggle-btn {
+      display: block;
+  }
+
+  .lista-footer {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+/* RESPONSIVIDAD MODO OSCURO (MENÚ) */
+@media (max-width: 995px) {
+  .dark-mode nav {
+    background-color: #444;
+    border-left: 3px solid #FF8C00;
+    border-bottom: 3px solid #FF8C00;
+  }
+  .dark-mode nav a {
+    color: #FF8C00;
+  }
+  .dark-mode nav a:hover,
+  .dark-mode nav a.active {
+    color: #FFA500;
+    border-bottom: none;
+  }
+}
+
+/* RESPONSIVIDAD GENERAL MÓVIL */
+@media (max-width: 480px) {
+  html {
+    font-size: 50%;
+  }
+  
+  .productos-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .home-content h1 {
+    font-size: 4rem;
+  }
+}
+#click-counter {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  background-color: #007BFF; /* Azul brillante */
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  margin-left: 1.5rem; /* Separación del logo */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  line-height: 1.3; 
+  /* Evita que el texto del contador sea seleccionable */
+  user-select: none; 
+}
+
+#click-count {
+  font-weight: 700;
+  font-size: 1.6rem;
+  padding-right: 4px;
+}
+
+/* Animación de "moverse" (pulse) */
+.click-animate {
+  animation: click-pulse 0.4s ease;
+}
+
+@keyframes click-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+/* ... (estilo .dark-mode .modo-toggle-btn:hover) ... */
+
+/* === ¡NUEVO! CONTADOR EN MODO OSCURO === */
+.dark-mode #click-counter {
+  background-color: #FFC300; /* Acento amarillo */
+  color: #333; /* Texto oscuro */
+}
+/* =================================== */

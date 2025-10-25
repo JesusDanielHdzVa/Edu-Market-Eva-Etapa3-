@@ -1,0 +1,124 @@
+*{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #2e7d32;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    
+}
+
+h1{
+    color: greenyellow;
+}
+.img img {
+  position: relative;
+  top: 5px;
+  width: 75px;
+  border-radius: 25px;
+  left: 24%;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+img{
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10000px;
+    padding: 10px;
+    backdrop-filter: blur(50px);
+    filter: drop-shadow(3px);
+    display: flex;
+    z-index: 10;
+}
+
+a{
+    text-decoration: none;
+    color: greenyellow;
+
+}
+a:hover{
+    color: black;
+    text-decoration: underline;
+}
+
+.aa{
+    display: flex;
+    position: relative;
+    top: 15px;
+    left: 300px;
+    z-index: 100000;
+}
+.Inicio{
+    text-align: justify;
+    display: flex;
+
+}
+h3{
+   color: greenyellow; 
+}
+
+.Inicio img{
+    border-radius: 30%;
+    position: relative;
+    left: 10px;
+    z-index: 1;
+}
+strong{
+    color: greenyellow;
+}
+.opciones{
+    display: flex;
+    position: absolute;
+    left: -30px;
+}
+.libro{
+    display: flex;
+    top: 0;
+
+}
+.libro img{
+    border-radius: 100px;
+}
+.libro a{
+    font-size: 1.4em;   
+    position: absolute;
+    
+
+}
+iframe{
+    border-radius: 50px;
+    height: 800px;
+    width: 800px;
+}
+footer{
+    border-radius: 40px;
+    color: black;
+}
+fieldset{
+    border-radius: 30px;
+}
+button{
+    border-radius: 10px;
+    background-color: greenyellow;
+}
+legend{
+    color: greenyellow;
+}
+label{
+    color: greenyellow;
+}
+textarea{
+    border-radius: 10px;
+}
+input{
+    border-radius: 10px;
+}
+select{
+    border-radius: 10px;
+}
