@@ -1,7 +1,5 @@
-/* === ESPERA A QUE EL CONTENIDO DEL DOM SE CARGUE === */
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- Lógica de Modo Oscuro ---
     const toggleButton = document.getElementById('modo-toggle');
     const body = document.body;
 
@@ -25,12 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- Lógica de Búsqueda Dinámica ---
     const searchBar = document.getElementById('search-bar');
     const allBookCards = document.querySelectorAll('.producto-card');
 
-    // (Asegúrate de tener un 'search-bar' en tu HTML para que esto no falle)
-    if (searchBar) {
+   if (searchBar) {
         searchBar.addEventListener('input', (evento) => {
             const searchTerm = evento.target.value.toLowerCase();
 
@@ -45,33 +41,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // === ¡NUEVO! LÓGICA DEL CONTADOR DE CLICKS ===
     let clickCount = 0;
     const counterDisplay = document.getElementById('click-counter');
     const countElement = document.getElementById('click-count');
     
-    // Escucha clics en CUALQUIER parte del documento
     document.addEventListener('click', () => {
-        // 1. Incrementar el contador
         clickCount++;
         
-        // 2. Actualizar el texto
         countElement.textContent = clickCount;
         
-        // 3. Aplicar la animación (quitar y poner la clase)
-        // Esto reinicia la animación en cada clic
-        counterDisplay.classList.remove('click-animate');
+       counterDisplay.classList.remove('click-animate');
         
-        // Forzar al navegador a "refrescar" el elemento
-        void counterDisplay.offsetWidth; 
+       void counterDisplay.offsetWidth; 
         
         counterDisplay.classList.add('click-animate');
     });
-    // ==========================================
-
-
-    // --- Lógica del Carrito de Compras ---
-    
+ 
     let totalCarrito = 0; 
     const listaLibros = document.getElementById('lista-libros');
     const listaVacia = document.getElementById('lista-vacia');
@@ -83,12 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
         boton.addEventListener('click', (evento) => {
             evento.preventDefault(); 
             
-            // ¡Importante! Detiene la propagación del clic.
-            // Si no ponemos esto, el clic en el botón también
-            // activará el contador de clics del documento.
-            // Quita esta línea si SÍ quieres que cuente.
-            // evento.stopPropagation(); // <--- Descomenta esto si no quieres que cuente
-
+        
             if (boton.classList.contains('btn-anadido')) {
                 return; 
             }
@@ -129,18 +109,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /**
-     * Actualiza el texto del total en el HTML
-     */
+ 
     function actualizarTotal() {
         if(totalMonto) {
             totalMonto.textContent = `$${totalCarrito.toFixed(2)}`;
         }
     }
 
-    /**
-     * Función que crea y añade un nuevo libro a la lista visible
-     */
+  
     function agregarALista(tituloLibro, precioLibro) {
         if (listaVacia) {
             listaVacia.style.display = 'none';
@@ -161,12 +137,10 @@ document.addEventListener('DOMContentLoaded', () => {
         listaLibros.appendChild(nuevoItem);
     }
 
-    /**
-     * Muestra una notificación toast en la esquina
-     */
+ 
     function mostrarToast(mensaje) {
         const container = document.getElementById('toast-container');
-        if (!container) return; // Salir si no existe
+        if (!container) return; 
         
         const toast = document.createElement('div');
         toast.classList.add('toast');

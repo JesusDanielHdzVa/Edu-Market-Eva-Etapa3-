@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
 
-/* --- RESETEO Y BASE --- */
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +12,7 @@
 }
 
 html {
-  font-size: 62.5%; /* 1rem = 10px */
+  font-size: 62.5%;
 }
 
 body {
@@ -23,7 +22,6 @@ body {
   color: #333333; 
 }
 
-/* --- TIPOGRAFÍA GENERAL --- */
 h1 {
   font-size: 5rem;
   font-weight: 700;
@@ -43,12 +41,10 @@ p {
   color: #555; 
 }
 
-/* Span de acento */
 .energia-span {
   color: #005A9C;
 }
 
-/* --- HEADER Y NAVEGACIÓN --- */
 header {
   position: fixed;
   top: 0;
@@ -98,13 +94,11 @@ nav a.active {
   border-bottom: 3px solid #007BFF;
 }
 
-/* --- ESTILOS DE SECCIÓN GENERAL --- */
 section {
   min-height: 100vh;
   padding: 10rem 9% 5rem;
 }
 
-/* Sección de Inicio (Hero) */
 .home {
   display: flex;
   justify-content: center;
@@ -119,20 +113,19 @@ section {
   text-align: center;
 }
 
-/* Limpiando reglas duplicadas */
 .home-img img {
   position: relative;
-  width: 400px; /* Tamaño ajustado */
+  width: 400px;
   height: 400px;
   object-fit: cover;
-  border-radius: 65% 35% 55% 45% / 40% 50% 50% 60%; /* Forma de "blob" */
-  box-shadow: 0 10px 30px rgba(0, 90, 156, 0.3); /* Sombra azul */
+  border-radius: 65% 35% 55% 45% / 40% 50% 50% 60%;
+  box-shadow: 0 10px 30px rgba(0, 90, 156, 0.3);
   cursor: pointer;
   transition: 0.3s ease;
 }
 .home-img img:hover {
-  transform: scale(1.1); /* Efecto hover simple */
-  box-shadow: 0 10px 35px rgba(0, 123, 255, 0.5); /* Sombra más intensa */
+  transform: scale(1.1);
+  box-shadow: 0 10px 35px rgba(0, 123, 255, 0.5);
 }
 
 .home-content {
@@ -148,7 +141,6 @@ section {
   margin-bottom: 2rem;
 }
 
-/* --- BOTÓN PRINCIPAL --- */
 .btn {
   display: inline-block;
   padding: 1.2rem 3rem;
@@ -172,88 +164,46 @@ section {
   box-shadow: 0 0 25px rgba(0, 123, 255, 0.5); 
 }
 
-/* --- ANIMACIÓN DE TEXTO --- */
-.typing-texts {
-
-  font-size: 34px;
-
-  font-weight: 600;
-
-  min-width: 280px;
-
-}
-
-
-
 .typing-text span {
-
   position: relative;
-
 }
-
-
 
 .typing-text span::before {
-
-  content: "software Developer";
-
+  content: "Lectura";
   color: #007BFF;
-
   animation: words 10s infinite;
-
 }
-
-
 
 .typing-text span::after {
-
   content: "";
-
   background-color: #F4F4F9;
-
   position: absolute;
-
   width: calc(100% + 8px);
-
   height: 100%;
-
   border-left: 3px solid #007BFF;
-
-  right: -8;
-
+  right: -8px;
   animation: cursor 0.6s infinite;
-
 }
-
-
 
 @keyframes cursor {
-
   to {
-    border-left: 3px solid;
+    border-left-color: transparent;
   }
 }
-/* Animación de nombres de equipo */
-/* Ajustando tiempos para 8 nombres en 16 segundos */
+
 @keyframes words {
-
   0%, 20% { content: "Lectura"; }
-
   21%, 40% { content: "Conocimiento"; }
-
   41%, 60% { content: "Cultura"; }
-
   61%, 80% { content: "Aventura"; }
-
   81%, 100% { content: "Ciencia"; }
-
 }
-/* --- SECCIÓN GENERAL (PARA PRODUCTOS Y CONTACTO) --- */
+
 .seccion-general {
   text-align: center;
 }
 .search-container {
-  margin: 0 auto 4rem auto; /* Centrado y con espacio abajo */
+  margin: 0 auto 4rem auto;
   max-width: 70rem;
 }
 
@@ -261,13 +211,13 @@ section {
   width: 100%;
   padding: 1.5rem 2rem;
   font-size: 1.8rem;
-  border-radius: 4rem; /* Redondeado, como los botones */
+  border-radius: 4rem;
   border: 2px solid #ccc;
   background: #FFFFFF;
   color: #333;
 }
 #search-bar:focus {
-  border-color: #005A9C; /* Acento azul al seleccionar */
+  border-color: #005A9C;
   box-shadow: 0 0 10px rgba(0, 90, 156, 0.3);
 }
 .seccion-descripcion {
@@ -279,7 +229,6 @@ section {
   margin-right: auto;
 }
 
-/* --- SECCIÓN DE PRODUCTOS (GRID) --- */
 .productos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -293,7 +242,6 @@ section {
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  /* Hacemos que la card use flex para posicionar el botón al fondo */
   display: flex;
   flex-direction: column;
 }
@@ -312,14 +260,13 @@ section {
 
 .card-content {
   padding: 2rem 2rem 0.5rem 2rem;
-  /* Hacemos que esta parte crezca para empujar el botón al fondo */
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
 
 .card-content p {
-  flex-grow: 1; /* La descripción <p> empuja el precio y botón hacia abajo */
+  flex-grow: 1;
 }
 
 .producto-card .categoria {
@@ -327,7 +274,7 @@ section {
   font-weight: 500;
   color: #5F9EA0; 
   margin-bottom: 1rem;
-  flex-grow: 0; /* No debe crecer */
+  flex-grow: 0;
 }
 
 .producto-card p {
@@ -335,7 +282,6 @@ section {
   color: #444; 
 }
 
-/* NUEVO: Estilo para el precio */
 .producto-precio {
   font-size: 2rem;
   font-weight: 600;
@@ -347,13 +293,12 @@ section {
 .btn-comprar {
   width: 100%;        
   text-align: center; 
-  margin: 1rem 0 1.5rem 0; /* Margen ajustado */ 
+  margin: 1rem 0 1.5rem 0;
   padding: 1rem 0;     
   font-size: 1.5rem;
-  flex-shrink: 0; /* Evita que el botón se encoja */
+  flex-shrink: 0;
 }
 
-/* ESTILO "AÑADIDO" */
 .btn-anadido {
   background-color: #28a745;
   border-color: #28a745;
@@ -367,7 +312,6 @@ section {
   box-shadow: none;
 }
 
-/* --- SECCIÓN "MI LISTA" --- */
 #mi-lista {
   background-color: #FFFFFF;
   min-height: auto; 
@@ -392,13 +336,11 @@ section {
   color: #333;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  /* NUEVO: Flex para alinear título y precio */
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* NUEVO: Estilo para el precio en la lista */
 .lista-item-precio {
   font-weight: 600;
   color: #005A9C;
@@ -414,10 +356,9 @@ section {
   text-align: center;
   font-style: italic;
   font-weight: 400;
-  display: block; /* Asegurarse de que se muestre */
+  display: block;
 }
 
-/* NUEVO: Contenedor del Total y Botón */
 .lista-footer {
   max-width: 70rem;
   margin: 3rem auto 0 auto;
@@ -426,7 +367,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* Para pantallas pequeñas */
+  flex-wrap: wrap;
 }
 
 .lista-total {
@@ -440,11 +381,10 @@ section {
   color: #005A9C;
 }
 
-/* NUEVO: Botón de Vaciar/Comprar */
 .btn-vaciar {
-  background-color: #dc3545; /* Rojo de "peligro" */
+  background-color: #dc3545;
   border-color: #dc3545;
-  margin: 0; /* Quitar margen por defecto */
+  margin: 0;
 }
 .btn-vaciar:hover {
   background-color: #c82333;
@@ -452,8 +392,6 @@ section {
   box-shadow: 0 0 25px rgba(220, 53, 69, 0.5);
 }
 
-
-/* --- SECCIÓN DE CONTACTO --- */
 .form-container {
   max-width: 80rem;
   margin: 0 auto;
@@ -506,7 +444,6 @@ section {
   box-shadow: 0 0 25px rgba(0, 90, 156, 0.4);
 }
 
-/* --- ESTILOS TOAST --- */
 #toast-container {
   position: fixed;
   bottom: 30px;
@@ -535,17 +472,44 @@ section {
   transform: translateY(0);
 }
 
+#click-counter {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  background-color: #007BFF;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  margin-left: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  line-height: 1.3; 
+  user-select: none; 
+}
 
-/* ==================================================
-   ¡AQUÍ COMIENZAN LOS ESTILOS DEL MODO OSCURO!
-==================================================
+#click-count {
+  font-weight: 700;
+  font-size: 1.6rem;
+  padding-right: 4px;
+}
+
+.click-animate {
+  animation: click-pulse 0.4s ease;
+}
+
+@keyframes click-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+
+/* 
+AQUÍ COMIENZAN LOS ESTILOS DEL MODO OSCURO
 */
 
-/* --- Estilo para el botón 🌙/☀️ --- */
 .modo-toggle-btn {
   background: none;
   border: none;
-  font-size: 1.8rem; /* Tamaño del texto */
+  font-size: 1.8rem;
   font-weight: 600;
   cursor: pointer;
   transition: 0.3s ease;
@@ -555,7 +519,6 @@ section {
   border: 2px solid #FFC300;
   background-color: #FFC300;
   color: #005A9C;
-
   border-radius: 2rem;
 }
 .modo-toggle-btn:hover {
@@ -563,13 +526,11 @@ section {
 }
 .dark-mode .home-img img{
   box-shadow: 0 0 25px #FFC300;
-
 }
 .dark-mode .home-img img:hover {
   box-shadow: 0 0 35px #FFC300; 
 }
 
-/* --- Sobreescrituras para el MODO OSCURO --- */
 .dark-mode body,
 .dark-mode {
   background-color: #333333;
@@ -579,12 +540,8 @@ section {
   color: #FFC300;
   border-color: #005A9C;
   background-color: #005A9C;
+}
 
-}
-.dark-mode .modo-toggle-btn:hover {
-  background-color: #FFC300;
-  color: #333;
-}
 
 .dark-mode h1 {
   color: #ffffff;
@@ -604,9 +561,6 @@ section {
   background-color: rgba(51, 51, 51, 0.8);
   border-bottom: 1px solid rgba(255, 140, 0, 0.2);
 }
-/* ... (estilo .dark-mode .seccion-descripcion) ... */
-
-/* === ¡NUEVO! BARRA DE BÚSQUEDA EN MODO OSCURO === */
 
 .dark-mode #search-bar {
   background: #555;
@@ -614,11 +568,9 @@ section {
   color: #FFFFFF;
 }
 .dark-mode #search-bar:focus {
-  border-color: #FF8C00; /* Acento naranja */
+  border-color: #FF8C00;
   box-shadow: 0 0 10px rgba(255, 140, 0, 0.3);
 }
-/* =========================================== */
-
 
 .dark-mode .logo {
   color: #FF8C00;
@@ -649,20 +601,17 @@ section {
   color: #ffffff;
 }
 .dark-mode .typing-text span {
-  color: #FF8C00; /* La palabra animada sí va naranja */
+  color: #FF8C00;
 }
 
 .dark-mode .typing-text span::after {
-  background-color: #333333; /* El fondo que "borra" */
-  border-left: 3px solid #FF8C00; /* El cursor naranja */
+  background-color: #333333;
+  border-left: 3px solid #FF8C00;
 }
 
 .dark-mode .typing-text span::before {
-
-  content: "software Developer";
-
+  content: "Lectura";
   color: #FF8C00;
-
 }
 
 .dark-mode .seccion-descripcion {
@@ -685,7 +634,6 @@ section {
   color: #ddd;
 }
 
-/* MODO OSCURO: Precio */
 .dark-mode .producto-precio {
   color: #FFC300;
 }
@@ -723,7 +671,6 @@ section {
   box-shadow: 0 0 25px #FFC300;
 }
 
-/* MODO OSCURO: Botón "Añadido" */
 .dark-mode .btn-anadido {
   background-color: #5cb85c;
   border-color: #5cb85c;
@@ -734,7 +681,6 @@ section {
   border-color: #4cae4c;
 }
 
-/* MODO OSCURO: "Mi Lista" */
 .dark-mode #mi-lista {
   background-color: #2c2c2c;
 }
@@ -761,7 +707,7 @@ section {
   color: #FFC300;
 }
 .dark-mode .btn-vaciar {
-  background-color: #e74c3c; /* Rojo más brillante */
+  background-color: #e74c3c;
   border-color: #e74c3c;
   color: #ffffff;
 }
@@ -770,140 +716,12 @@ section {
   border-color: #c0392b;
 }
 
-/* MODO OSCURO: Toast */
 .dark-mode .toast {
   background-color: #5cb85c;
   color: #333;
 }
 
-
-/* --- RESPONSIVIDAD (MENÚ) --- */
-@media (max-width: 995px) {
-  nav {
-    position: absolute;
-    display: none;
-    top: 100%; 
-    right: 0;
-    width: 40%;
-    min-width: 250px;
-    border-left: 3px solid #005A9C;
-    border-bottom: 3px solid #005A9C;
-    border-bottom-left-radius: 2rem;
-    padding: 1rem;
-    background-color: #FFFFFF;
-  }
-
-  nav.active {
-    display: block;
-  }
-
-  nav a {
-    display: block;
-    font-size: 2rem;
-    margin: 3rem 0;
-    color: #005A9C;
-    text-align: center;
-  }
-
-  nav a:hover,
-  nav a.active {
-    transform: scale(1.1);
-    color: #007BFF;
-    border-bottom: none;
-  }
-
-  html {
-    font-size: 55%;
-  }
-
-  section {
-    padding: 10rem 4% 5rem;
-  }
-  
-  .modo-toggle-btn {
-    display: block;
-    margin: 2rem auto;
-  }
-  
-  header nav .modo-toggle-btn {
-      display: none;
-  }
-  header nav.active .modo-toggle-btn {
-      display: block;
-  }
-
-  .lista-footer {
-    flex-direction: column;
-    gap: 2rem;
-  }
-}
-
-/* RESPONSIVIDAD MODO OSCURO (MENÚ) */
-@media (max-width: 995px) {
-  .dark-mode nav {
-    background-color: #444;
-    border-left: 3px solid #FF8C00;
-    border-bottom: 3px solid #FF8C00;
-  }
-  .dark-mode nav a {
-    color: #FF8C00;
-  }
-  .dark-mode nav a:hover,
-  .dark-mode nav a.active {
-    color: #FFA500;
-    border-bottom: none;
-  }
-}
-
-/* RESPONSIVIDAD GENERAL MÓVIL */
-@media (max-width: 480px) {
-  html {
-    font-size: 50%;
-  }
-  
-  .productos-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
-
-  .home-content h1 {
-    font-size: 4rem;
-  }
-}
-#click-counter {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #FFFFFF;
-  background-color: #007BFF; /* Azul brillante */
-  padding: 0.5rem 1rem;
-  border-radius: 2rem;
-  margin-left: 1.5rem; /* Separación del logo */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  line-height: 1.3; 
-  /* Evita que el texto del contador sea seleccionable */
-  user-select: none; 
-}
-
-#click-count {
-  font-weight: 700;
-  font-size: 1.6rem;
-  padding-right: 4px;
-}
-
-/* Animación de "moverse" (pulse) */
-.click-animate {
-  animation: click-pulse 0.4s ease;
-}
-
-@keyframes click-pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.2); }
-  100% { transform: scale(1); }
-}
-/* ... (estilo .dark-mode .modo-toggle-btn:hover) ... */
-
-/* === ¡NUEVO! CONTADOR EN MODO OSCURO === */
 .dark-mode #click-counter {
-  background-color: #FFC300; /* Acento amarillo */
-  color: #333; /* Texto oscuro */
+  background-color: #FFC300;
+  color: #333;
 }
-/* =================================== */
